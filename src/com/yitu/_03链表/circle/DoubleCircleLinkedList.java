@@ -111,7 +111,7 @@ public class DoubleCircleLinkedList<E> extends AbstractList<E> {
             next.prev = node;
             prev.next = node;
 
-            if (next == first) { // index == 0
+            if (next == first) { // i==0
                 first = node;
             }
         }
@@ -176,19 +176,19 @@ public class DoubleCircleLinkedList<E> extends AbstractList<E> {
     private Node<E> node(int index) {
         rangeCheck(index);
 
+        Node<E> node;
         if (index < (size >> 1)) {
-            Node<E> node = first;
+            node = first;
             for (int i = 0; i < index; i++) {
                 node = node.next;
             }
-            return node;
         } else {
-            Node<E> node = last;
+            node = last;
             for (int i = size - 1; i > index; i--) {
                 node = node.prev;
             }
-            return node;
         }
+        return node;
     }
 
     @Override

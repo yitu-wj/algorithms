@@ -8,7 +8,6 @@ public abstract class AbstractList<E> implements List<E> {
 
     /**
      * 元素的数量
-     * @return
      */
     public int size() {
         return size;
@@ -16,7 +15,6 @@ public abstract class AbstractList<E> implements List<E> {
 
     /**
      * 是否为空
-     * @return
      */
     public boolean isEmpty() {
         return size == 0;
@@ -24,8 +22,7 @@ public abstract class AbstractList<E> implements List<E> {
 
     /**
      * 是否包含某个元素
-     * @param element
-     * @return
+     * @param element   元素
      */
     public boolean contains(E element) {
         return indexOf(element) != ELEMENT_NOT_FOUND;
@@ -33,7 +30,7 @@ public abstract class AbstractList<E> implements List<E> {
 
     /**
      * 添加元素到尾部
-     * @param element
+     * @param element   元素
      */
     public void add(E element) {
         add(size, element);

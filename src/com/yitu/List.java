@@ -1,7 +1,7 @@
 package com.yitu;
 
 public interface List<E> {
-    static final int ELEMENT_NOT_FOUND = -1;
+    int ELEMENT_NOT_FOUND = -1;
     /**
      * 清除所有元素
      */
@@ -9,62 +9,56 @@ public interface List<E> {
 
     /**
      * 元素的数量
-     * @return
      */
     int size();
 
     /**
      * 是否为空
-     * @return
      */
     boolean isEmpty();
 
     /**
      * 是否包含某个元素
-     * @param element
-     * @return
+     * @param element   元素
      */
     boolean contains(E element);
 
     /**
      * 添加元素到尾部
-     * @param element
+     * @param element   元素
      */
     void add(E element);
 
     /**
      * 获取index位置的元素
-     * @param index
-     * @return
+     * @param index     索引
      */
     E get(int index);
 
     /**
      * 设置index位置的元素
-     * @param index
-     * @param element
+     * @param index     索引
+     * @param element   元素
      * @return 原来的元素ֵ
      */
     E set(int index, E element);
 
     /**
      * 在index位置插入一个元素
-     * @param index
-     * @param element
+     * @param index     索引
+     * @param element   元素
      */
     void add(int index, E element);
 
     /**
      * 删除index位置的元素
-     * @param index
-     * @return
+     * @param index     元素
      */
     E remove(int index);
 
     /**
      * 查看元素的索引
-     * @param element
-     * @return
+     * @param element   元素
      */
     int indexOf(E element);
 }
