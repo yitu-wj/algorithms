@@ -15,13 +15,21 @@ public class Main {
             bst.add(data[i]);
         }
         BinaryTrees.println(bst);
-        bst.levelOrder(new BinarySearchTree.Visitor<Integer>() {
-            @Override
-            public boolean visit(Integer element) {
-                System.out.println(element);
-                return false;
-            }
-        });
+        bst.remove(1);
+        bst.remove(3);
+        bst.remove(9);
+        bst.remove(2);
+        BinaryTrees.println(bst);
+//        System.out.println(bst);
+//        System.out.println("height:"+bst.height2());
+//        System.out.println("height:"+bst.height());
+//        bst.preorder(new BinarySearchTree.Visitor<Integer>() {
+//            @Override
+//            public boolean visit(Integer element) {
+//                System.out.println(element);
+//                return false;
+//            }
+//        });
     }
     private static void test2(){
         Integer data[] = new Integer[] {
@@ -38,6 +46,7 @@ public class Main {
             bst2.add(new Person(data[i]));
         }
         BinaryTrees.println(bst2);
+
     }
     private static void test3(){
         BinarySearchTree<Integer> bst = new BinarySearchTree<>();
