@@ -1,8 +1,7 @@
 package com.yitu._06二叉搜索树;
 
 import com.yitu._06二叉搜索树.file.Files;
-import com.yitu._06二叉搜索树.printer.BinaryTreeInfo;
-import com.yitu._06二叉搜索树.printer.BinaryTrees;
+import com.yitu.printer.BinaryTrees;
 
 
 public class Main {
@@ -10,7 +9,7 @@ public class Main {
         Integer data[] = new Integer[] {
                 7, 4, 9, 2, 5, 8, 11, 3, 12, 1
         };
-        BinarySearchTree<Integer> bst=new BinarySearchTree<>();
+        BST<Integer> bst=new BST<>();
         for (int i = 0; i < data.length; i++) {
             bst.add(data[i]);
         }
@@ -35,13 +34,13 @@ public class Main {
         Integer data[] = new Integer[] {
                 7, 4, 9, 2, 5, 8, 11, 3, 12, 1
         };
-        BinarySearchTree<Person> bst1 = new BinarySearchTree<>();
+        BST<Person> bst1 = new BST<>();
         for (int i = 0; i < data.length; i++) {
             bst1.add(new Person(data[i]));
         }
         BinaryTrees.println(bst1);
 
-        BinarySearchTree<Person> bst2 = new BinarySearchTree<>((o1, o2) -> o2.getAge() - o1.getAge());
+        BST<Person> bst2 = new BST<>((o1, o2) -> o2.getAge() - o1.getAge());
         for (int i = 0; i < data.length; i++) {
             bst2.add(new Person(data[i]));
         }
@@ -49,7 +48,7 @@ public class Main {
 
     }
     private static void test3(){
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        BST<Integer> bst = new BST<>();
         for (int i = 0; i < 40; i++) {
             bst.add((int)(Math.random() * 100));
         }
@@ -59,7 +58,7 @@ public class Main {
         Files.writeToFile("E:/1.txt", str, true);
     }
     private static void test4(){
-        BinaryTrees.println(new BinaryTreeInfo() {
+        BinaryTrees.println(new BST() {
 
             @Override
             public Object string(Object node) {

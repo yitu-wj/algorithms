@@ -1,6 +1,6 @@
-package com.yitu._06二叉搜索树.printer;
+package com.yitu.printer;
 
-public abstract class Printer {	
+public abstract class Printer {
 	/**
 	 * 二叉树的基本信息
 	 */

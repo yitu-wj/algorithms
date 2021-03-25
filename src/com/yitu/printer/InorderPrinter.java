@@ -1,4 +1,4 @@
-package com.yitu._06二叉搜索树.printer;
+package com.yitu.printer;
 
 /**
 
@@ -45,7 +45,7 @@ public class InorderPrinter extends Printer {
 		string.deleteCharAt(string.length() - 1);
 		return string.toString();
 	}
-	
+
 	/**
 	 * 生成node节点的字符串
 	 * @param nodePrefix node那一行的前缀字符串
@@ -54,20 +54,20 @@ public class InorderPrinter extends Printer {
 	 * @return
 	 */
 	private String printString(
-			Object node, 
+			Object node,
 			String nodePrefix,
-			String leftPrefix, 
+			String leftPrefix,
 			String rightPrefix) {
 		Object left = tree.left(node);
 		Object right = tree.right(node);
 		String string = tree.string(node).toString();
-		
+
 		int length = string.length();
 		if (length % 2 == 0) {
 			length--;
 		}
 		length >>= 1;
-		
+
 		String nodeString = "";
 		if (right != null) {
 			rightPrefix += Strings.blank(length);

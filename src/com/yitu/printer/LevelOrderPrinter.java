@@ -1,11 +1,6 @@
-package com.yitu._06二叉搜索树.printer;
+package com.yitu.printer;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
 

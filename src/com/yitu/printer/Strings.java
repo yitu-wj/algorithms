@@ -1,4 +1,4 @@
-package com.yitu._06二叉搜索树.printer;
+package com.yitu.printer;
 
 public class Strings {
 	public static String repeat(String string, int count) {
