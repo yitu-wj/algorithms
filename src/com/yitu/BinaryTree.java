@@ -172,6 +172,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         sb.append(prefix).append(node.element).append("\n");
         toString(node.right,sb,prefix+"R---");
     }
+
+
+    protected Node<E> createNode(E element,Node<E> parent){
+        return new Node<>(element, parent);
+    }
     protected Node<E> predecessor(Node<E> node) {
         if (node == null) return null;
 
