@@ -244,7 +244,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
          */
         public abstract boolean visit(E element);
     }
-    protected static class Node<E> {
+    public static class Node<E> {
         public E element;
         public Node<E> left;
         public Node<E> right;

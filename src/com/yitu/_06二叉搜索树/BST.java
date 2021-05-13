@@ -4,6 +4,9 @@ import com.yitu.BinaryTree;
 
 import java.util.Comparator;
 
+/**
+ * 二叉搜索树
+ */
 public class BST<E> extends BinaryTree<E> {
     private Comparator<E> comparator;
 
@@ -17,7 +20,6 @@ public class BST<E> extends BinaryTree<E> {
 
     public void add(E element) {
         elementNotNullCheck(element);
-
         // 添加第一个节点
         if (root == null) {
             root = createNode(element,null);

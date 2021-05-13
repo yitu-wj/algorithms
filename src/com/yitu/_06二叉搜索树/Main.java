@@ -7,17 +7,17 @@ import com.yitu.printer.BinaryTrees;
 public class Main {
     private static void test1(){
         Integer data[] = new Integer[] {
-                7, 4, 9, 2, 5, 8, 11, 3, 12, 1
+                4,2,5,1,3
         };
         BST<Integer> bst=new BST<>();
         for (int i = 0; i < data.length; i++) {
             bst.add(data[i]);
         }
-        BinaryTrees.println(bst);
-        bst.remove(1);
-        bst.remove(3);
-        bst.remove(9);
-        bst.remove(2);
+//        BinaryTrees.println(bst);
+//        bst.remove(1);
+//        bst.remove(3);
+//        bst.remove(9);
+//        bst.remove(2);
         BinaryTrees.println(bst);
 //        System.out.println(bst);
 //        System.out.println("height:"+bst.height2());
