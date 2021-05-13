@@ -235,7 +235,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
 
     @Override
     public Object string(Object node) {
-        return ((Node<E>)node).element;
+        return node;
     }
     public static abstract class Visitor<E>{
         boolean stop;

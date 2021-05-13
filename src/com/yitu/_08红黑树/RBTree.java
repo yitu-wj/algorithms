@@ -1,14 +1,60 @@
 package com.yitu._08红黑树;
 
-import com.yitu._06二叉搜索树.BST;
+import com.yitu._06二叉搜索树.BBST;
 
 import java.util.Comparator;
 
-public class RBTree<E> extends BST<E> {
+/**
+ * 红黑树
+ */
+public class RBTree<E> extends BBST<E> {
     private static final boolean RED=false;
     private static final boolean BLACK=true;
     public RBTree(){
         this(null);
+    }
+
+    @Override
+    protected void afterAdd(Node<E> node) {
+        super.afterAdd(node);
+        Node<E> parent=node.parent;
+        // 添加的是根节点 或者 上溢到达了根节点
+        if(parent==null){
+            black(node);
+            return;
+        }
+
+        // 如果父节点是黑节点，直接返回
+        if(isBlack(parent)) return;
+        // 叔父节点
+        Node<E> uncle=parent.sibling();
+        // 祖父节点
+        Node<E> grand = red(parent.parent);
+        if (isRed(uncle)) { // 叔父节点是红色【B树节点上溢】
+            black(parent);
+            black(uncle);
+            // 把祖父节点当做是新添加的节点
+            afterAdd(grand);
+            return;
+        }
+        // 叔父节点不是红色
+        if (parent.isLeftChild()) { // L
+            if (node.isLeftChild()) { // LL
+                black(parent);
+            } else { // LR
+                black(node);
+                rotateLeft(parent);
+            }
+            rotateRight(grand);
+        } else { // R
+            if (node.isLeftChild()) { // RL
+                black(node);
+                rotateRight(parent);
+            } else { // RR
+                black(parent);
+            }
+            rotateLeft(grand);
+        }
     }
 
     public RBTree(Comparator<E> comparator){
