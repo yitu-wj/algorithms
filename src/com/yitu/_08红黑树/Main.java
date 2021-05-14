@@ -10,5 +10,8 @@ public class Main {
             rbTree.add(integer);
         }
         BinaryTrees.println(rbTree);
+        rbTree.remove(89);
+        rbTree.remove(93);
+        BinaryTrees.println(rbTree);
     }
 }
