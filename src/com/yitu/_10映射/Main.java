@@ -1,5 +1,7 @@
 package com.yitu._10映射;
 
+import com.yitu.Map;
+
 public class Main {
     public static void main(String[] args) {
         Map<String,String> map=new TreeMap<>();

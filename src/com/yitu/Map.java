@@ -1,4 +1,4 @@
-package com.yitu._10映射;
+package com.yitu;
 
 public interface Map<K,V> {
     int size();
@@ -11,8 +11,8 @@ public interface Map<K,V> {
     boolean containsValue(V value);
     void traversal(Visitor<K, V> visitor);
 
-    public static abstract class Visitor<K, V> {
-        boolean stop;
+    abstract class Visitor<K, V> {
+        public boolean stop;
         public abstract boolean visit(K key, V value);
     }
 }
