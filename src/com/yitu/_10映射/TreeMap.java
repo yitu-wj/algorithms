@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 
+@SuppressWarnings("unchecked")
 public class TreeMap<K,V> implements Map<K,V> {
     private static final boolean RED = false;
     private static final boolean BLACK = true;

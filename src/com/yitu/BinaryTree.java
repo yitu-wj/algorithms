@@ -5,6 +5,7 @@ import com.yitu.printer.BinaryTreeInfo;
 import java.util.LinkedList;
 import java.util.Queue;
 
+@SuppressWarnings("unchecked")
 public class BinaryTree<E> implements BinaryTreeInfo {
     protected int size;
     protected Node<E> root;

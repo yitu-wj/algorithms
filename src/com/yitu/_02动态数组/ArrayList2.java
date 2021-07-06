@@ -5,6 +5,7 @@ import com.yitu.AbstractList;
 /**
  * 有动态缩容操作
  */
+@SuppressWarnings("unchecked")
 public class ArrayList2<E> extends AbstractList<E> {
     /**
      * 所有的元素

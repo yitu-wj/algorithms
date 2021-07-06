@@ -3,6 +3,7 @@ package com.yitu._05队列.circle;
 /**
  * 循环队列
  */
+@SuppressWarnings("unchecked")
 public class CircleQueue<E> {
     private int front;
     private int size;
