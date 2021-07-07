@@ -4,6 +4,8 @@ import com.yitu.Asserts;
 import com.yitu.Map;
 import com.yitu.Times;
 import com.yitu._10映射.TreeMap;
+import com.yitu._11哈希表.map.HashMap;
+import com.yitu._11哈希表.map.LinkedHashMap;
 import com.yitu._11哈希表.model.Key;
 import com.yitu._11哈希表.model.SubKey1;
 import com.yitu._11哈希表.model.SubKey2;

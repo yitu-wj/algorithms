@@ -1,7 +1,8 @@
-package com.yitu._11哈希表;
+package com.yitu._11哈希表.set;
 
 import com.yitu.Map;
 import com.yitu.Set;
+import com.yitu._11哈希表.map.LinkedHashMap;
 
 public class LinkedHashSet<E> implements Set<E> {
     private LinkedHashMap<E, Object> map = new LinkedHashMap<>();

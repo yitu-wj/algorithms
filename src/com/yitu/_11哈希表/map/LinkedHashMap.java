@@ -1,4 +1,6 @@
-package com.yitu._11哈希表;
+package com.yitu._11哈希表.map;
+
+import com.yitu._11哈希表.map.HashMap;
 
 import java.util.Objects;
 

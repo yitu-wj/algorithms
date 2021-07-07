@@ -1,4 +1,4 @@
-package com.yitu._11哈希表;
+package com.yitu._11哈希表.map;
 
 import com.yitu.Map;
 import com.yitu.printer.BinaryTreeInfo;
