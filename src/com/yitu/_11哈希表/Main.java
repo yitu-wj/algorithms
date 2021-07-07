@@ -34,7 +34,7 @@ public class Main {
         });
     }
     static void test1() {
-        String filepath = "/Users/apple/Downloads/";
+        String filepath = "/Users/apple/Downloads/java/util";
         FileInfo fileInfo = Files.read(filepath, null);
         String[] words = fileInfo.words();
 
@@ -127,10 +127,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        test1();
-        test2(new HashMap<>());
-        test3(new HashMap<>());
-        test4(new HashMap<>());
-        test5(new HashMap<>());
+//        test1();
+//        test2(new HashMap<>());
+//        test3(new HashMap<>());
+//        test4(new HashMap<>());
+//        test5(new HashMap<>());
+
+        test2(new LinkedHashMap<>());
+        test3(new LinkedHashMap<>());
+        test4(new LinkedHashMap<>());
+        test5(new LinkedHashMap<>());
     }
 }

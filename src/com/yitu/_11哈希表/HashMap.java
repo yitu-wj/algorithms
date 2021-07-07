@@ -47,7 +47,7 @@ public class HashMap<K,V> implements Map<K,V> {
         // 取出index位置的红黑树根节点
         Node<K,V> root= table[index];
         if(root==null){
-            root=new Node<>(key,value,null);
+            root = createNode(key, value, null);
             table[index]=root;
             size++;
             fixAfterPut(root);
