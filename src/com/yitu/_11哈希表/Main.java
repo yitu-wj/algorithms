@@ -1,8 +1,8 @@
 package com.yitu._11哈希表;
 
-import com.yitu.Asserts;
+import com.yitu.tools.Asserts;
 import com.yitu.Map;
-import com.yitu.Times;
+import com.yitu.tools.Times;
 import com.yitu._10映射.TreeMap;
 import com.yitu._11哈希表.map.HashMap;
 import com.yitu._11哈希表.map.LinkedHashMap;

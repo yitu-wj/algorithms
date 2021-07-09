@@ -1,6 +1,6 @@
 package com.yitu._14Trie;
 
-import com.yitu.Asserts;
+import com.yitu.tools.Asserts;
 
 public class Main {
     static void test1() {
