@@ -15,8 +15,11 @@ public class Main {
                 new BubbleSort1(),
                 new BubbleSort2(),
                 new BubbleSort3(),
+                new InsertionSort1(),
+                new InsertionSort3(),
                 new HeapSort(),
-                new SelectionSort());
+                new SelectionSort(),
+                new MergeSort());
     }
     static void testSorts(Integer[] array, Sort... sorts) {
         for (Sort sort : sorts) {
