@@ -9,17 +9,19 @@ import java.util.Arrays;
 @SuppressWarnings({"rawtypes", "unchecked", "unused"})
 public class Main {
     public static void main(String[] args) {
-        Integer[] array = Integers.random(10000,0,10000);
+        Integer[] array = Integers.random(20000,0,10000);
 
         testSorts(array,
-                new BubbleSort1(),
-                new BubbleSort2(),
+//                new BubbleSort1(),
+//                new BubbleSort2(),
                 new BubbleSort3(),
-                new InsertionSort1(),
+//                new InsertionSort1(),
                 new InsertionSort3(),
                 new HeapSort(),
                 new SelectionSort(),
-                new MergeSort());
+                new MergeSort(),
+                new QuickSort(),
+                new ShellSort());
     }
     static void testSorts(Integer[] array, Sort... sorts) {
         for (Sort sort : sorts) {
