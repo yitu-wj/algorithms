@@ -1,5 +1,8 @@
 package com.yitu._15排序;
 
+import com.yitu._15排序.cmp.SelectionSort;
+import com.yitu._15排序.cmp.ShellSort;
+
 import java.text.DecimalFormat;
 
 @SuppressWarnings("unchecked")
@@ -82,6 +85,10 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
                 + "------------------------------------------------------------------";
     }
     private boolean isStable(){
+        if (this instanceof RadixSort) return true;
+        if (this instanceof CountingSort) return true;
+        if (this instanceof ShellSort) return false;
+        if (this instanceof SelectionSort) return false;
         Student[] students=new Student[20];
         for(int i=0;i< students.length;i++){
             students[i]=new Student(i*10,10);
