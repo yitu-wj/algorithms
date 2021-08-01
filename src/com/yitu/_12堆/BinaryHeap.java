@@ -3,6 +3,7 @@ package com.yitu._12堆;
 import com.yitu.AbstractHeap;
 import com.yitu.printer.BinaryTreeInfo;
 
+import java.util.Collection;
 import java.util.Comparator;
 
 /**
@@ -71,6 +72,21 @@ public class BinaryHeap<E> extends AbstractHeap<E> implements BinaryTreeInfo {
         elements[size++] = element;
         siftUp(size - 1);
     }
+
+    public void addAll(Collection<E> elements) {
+        if (elements == null) return;
+        for (E element : elements) {
+            add(element);
+        }
+    }
+
+    public void addAll(E[] elements) {
+        if (elements == null) return;
+        for (E element : elements) {
+            add(element);
+        }
+    }
+
 
     @Override
     public E get() {
