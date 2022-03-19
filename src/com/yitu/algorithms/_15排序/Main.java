@@ -1,6 +1,5 @@
 package com.yitu.algorithms._15排序;
 
-import com.yitu._15排序.cmp.*;
 import com.yitu.algorithms._15排序.cmp.*;
 import com.yitu.algorithms.tools.Asserts;
 import com.yitu.algorithms.tools.Integers;
