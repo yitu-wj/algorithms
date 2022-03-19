@@ -40,12 +40,20 @@ public abstract class AbstractList<E> implements List<E> {
         throw new IndexOutOfBoundsException("Index:" + index + ", Size:" + size);
     }
 
+    /**
+     * 检查索引的范围是否合法，不合法将抛出异常
+     * @param index     索引
+     */
     protected void rangeCheck(int index) {
         if (index < 0 || index >= size) {
             outOfBounds(index);
         }
     }
 
+    /**
+     * 为添加元素检查索引的范围是否合法，不合法将抛出异常
+     * @param index     索引
+     */
     protected void rangeCheckForAdd(int index) {
         if (index < 0 || index > size) {
             outOfBounds(index);
