@@ -43,6 +43,7 @@ public class HeadLinkedList<E> extends AbstractList<E> {
         rangeCheckForAdd(index);
         Node<E> prev = index == 0 ? first : node(index - 1);
         prev.next = new Node<>(element, prev.next);
+        size++;
     }
 
     @Override
@@ -60,14 +61,14 @@ public class HeadLinkedList<E> extends AbstractList<E> {
     @Override
     public int indexOf(E element) {
         if (element == null) {
-            Node<E> node = first;
+            Node<E> node = first.next;
             for (int i = 0; i < size; i++) {
                 if (node.element == null) return i;
 
                 node = node.next;
             }
         } else {
-            Node<E> node = first;
+            Node<E> node = first.next;
             for (int i = 0; i < size; i++) {
                 if (element.equals(node.element)) return i;
 
