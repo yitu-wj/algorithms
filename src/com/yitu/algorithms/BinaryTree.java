@@ -178,6 +178,10 @@ public class BinaryTree<E> implements BinaryTreeInfo {
     protected Node<E> createNode(E element,Node<E> parent){
         return new Node<>(element, parent);
     }
+
+    /**
+     * 查找指定节点的前驱节点，如果没有则返回null
+     */
     protected Node<E> predecessor(Node<E> node) {
         if (node == null) return null;
 
@@ -200,6 +204,9 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         return node.parent;
     }
 
+    /**
+     * 查找指定节点的后驱节点，如果没有则返回null
+     */
     protected Node<E> successor(Node<E> node) {
         if (node == null) return null;
 
