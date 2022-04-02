@@ -120,6 +120,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         }
         return true;
     }
+
+    /**
+     * 计算树的高度
+     * @return  树的高度
+     */
     public int height(){
         if(root==null) return 0;
 
