@@ -1,34 +1,57 @@
 package com.yitu.algorithms._06二叉搜索树;
 
+import com.yitu.algorithms.BinaryTree;
 import com.yitu.algorithms._06二叉搜索树.file.Files;
 import com.yitu.algorithms.printer.BinaryTrees;
+
+import java.util.Random;
 
 
 public class Main {
     private static void test1(){
         Integer data[] = new Integer[] {
-                4,2,5,1,3
+                9,3,2,1,6,7,4,5,8,
         };
         BST<Integer> bst=new BST<>();
         for (int i = 0; i < data.length; i++) {
             bst.add(data[i]);
         }
-//        BinaryTrees.println(bst);
-//        bst.remove(1);
-//        bst.remove(3);
-//        bst.remove(9);
-//        bst.remove(2);
         BinaryTrees.println(bst);
-//        System.out.println(bst);
-//        System.out.println("height:"+bst.height2());
-//        System.out.println("height:"+bst.height());
-//        bst.preorder(new BinarySearchTree.Visitor<Integer>() {
-//            @Override
-//            public boolean visit(Integer element) {
-//                System.out.println(element);
-//                return false;
-//            }
-//        });
+        System.out.println("前序遍历：");
+        bst.preorder(new BinaryTree.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.print(element+"，");
+                return false;
+            }
+        });
+        System.out.println();
+        System.out.println("中序遍历：");
+        bst.inorder(new BinaryTree.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.print(element+"，");
+                return false;
+            }
+        });
+        System.out.println();
+        System.out.println("后序遍历：");
+        bst.postorder(new BinaryTree.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.print(element+"，");
+                return false;
+            }
+        });
+        System.out.println();
+        System.out.println("层序遍历：");
+        bst.levelOrder(new BinaryTree.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.print(element+"，");
+                return false;
+            }
+        });
     }
     private static void test2(){
         Integer data[] = new Integer[] {
