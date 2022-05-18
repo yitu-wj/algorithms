@@ -14,24 +14,40 @@ public class BBST<E> extends BST<E> {
         super(comparator);
     }
 
+    /**
+     * 左旋转
+     */
     protected void rotateLeft(Node<E> grand) {
+        // 交换子树
         Node<E> parent = grand.right;
         Node<E> child = parent.left;
         grand.right = child;
         parent.left = grand;
+        // 维护parent和height
         afterRotate(grand, parent, child);
     }
 
+    /**
+     * 右旋转
+     */
     protected void rotateRight(Node<E> grand) {
+        // 交换子树
         Node<E> parent = grand.left;
         Node<E> child = parent.right;
         grand.left = child;
         parent.right = grand;
+        // 维护parent和height
         afterRotate(grand, parent, child);
     }
 
+    /**
+     * 不管是左旋转、右旋转都是要执行的
+     * @param grand     失衡节点
+     * @param parent    失衡节点的tallerChild
+     * @param child     grand和parent需要交换的子树（本来是parent的子树，后面变成了grand的子树）
+     */
     protected void afterRotate(Node<E> grand, Node<E> parent, Node<E> child) {
-        // 让parent称为子树的根节点
+        // 子树的根节点嫁接到原树中
         parent.parent = grand.parent;
         if (grand.isLeftChild()) {
             grand.parent.left = parent;
