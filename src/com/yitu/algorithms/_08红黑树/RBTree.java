@@ -73,6 +73,10 @@ public class RBTree<E> extends BBST<E> {
 
         // 删除的是黑色叶子节点【下溢】
         // 判断被删除的node是左还是右
+
+        // node为已经被删除的节点,不能通过node.sibling()直接拿到兄弟节点
+        // 因为删除操作会将 parent.left 或 parent.right 设置为 null
+        // 在调用isLeftChild()的时候会判断 this == parent.left，显然不成立
         boolean left = parent.left == null || node.isLeftChild();
         Node<E> sibling = left ? parent.right : parent.left;
         if (left) { // 被删除的节点在左边，兄弟节点在右边
