@@ -46,7 +46,7 @@ public class TreeMap<K,V> implements Map<K,V> {
             size++;
 
             // 新添加节点之后的处理
-            afterPut(root);
+            afterAdd(root);
             return null;
         }
 
@@ -80,7 +80,7 @@ public class TreeMap<K,V> implements Map<K,V> {
         size++;
 
         // 新添加节点之后的处理
-        afterPut(newNode);
+        afterAdd(newNode);
         return null;
     }
 
@@ -326,7 +326,7 @@ public class TreeMap<K,V> implements Map<K,V> {
         return null;
     }
 
-    private void afterPut(Node<K, V> node) {
+    private void afterAdd(Node<K, V> node) {
         Node<K, V> parent = node.parent;
 
         // 添加的是根节点 或者 上溢到达了根节点
@@ -346,7 +346,7 @@ public class TreeMap<K,V> implements Map<K,V> {
             black(parent);
             black(uncle);
             // 把祖父节点当做是新添加的节点
-            afterPut(grand);
+            afterAdd(grand);
             return;
         }
 
