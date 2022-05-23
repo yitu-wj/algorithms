@@ -1,9 +1,10 @@
 package com.yitu.algorithms._09集合;
 
 import com.yitu.algorithms.List;
+import com.yitu.algorithms.Set;
 import com.yitu.algorithms._03链表.single.LinkedList;
 
-public class ListSet<E> implements Set<E>{
+public class ListSet<E> implements Set<E> {
     private List<E> list = new LinkedList<>();
     @Override
     public int size() {

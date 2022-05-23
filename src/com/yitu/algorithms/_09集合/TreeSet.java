@@ -1,11 +1,12 @@
 package com.yitu.algorithms._09集合;
 
 import com.yitu.algorithms.BinaryTree;
+import com.yitu.algorithms.Set;
 import com.yitu.algorithms._08红黑树.RBTree;
 
 import java.util.Comparator;
 
-public class TreeSet<E> implements Set<E>{
+public class TreeSet<E> implements Set<E> {
     private RBTree<E> tree;
     public TreeSet() {
         this(null);
