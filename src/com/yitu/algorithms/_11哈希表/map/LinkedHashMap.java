@@ -4,37 +4,38 @@ import com.yitu.algorithms.Map;
 
 import java.util.Objects;
 
-@SuppressWarnings({ "rawtypes", "unchecked" })
-public class LinkedHashMap<K,V> extends HashMap<K,V> {
-    private LinkedNode<K,V> first;
-    private LinkedNode<K,V> last;
+@SuppressWarnings({"rawtypes", "unchecked"})
+public class LinkedHashMap<K, V> extends HashMap<K, V> {
+    private LinkedNode<K, V> first;
+    private LinkedNode<K, V> last;
 
     @Override
     public void clear() {
         super.clear();
-        first=null;
-        last=null;
+        first = null;
+        last = null;
     }
 
     @Override
     public boolean containsValue(V value) {
-        LinkedNode<K,V> node=first;
-        while (node!=null){
-            if(Objects.equals(value,node.value)) return true;
-            node=node.next;
+        LinkedNode<K, V> node = first;
+        while (node != null) {
+            if (Objects.equals(value, node.value)) return true;
+            node = node.next;
         }
         return false;
     }
 
     @Override
     public void traversal(Map.Visitor<K, V> visitor) {
-        if(visitor==null) return;
-        LinkedNode<K,V> node=first;
-        while (node!=null){
-            if(visitor.visit(node.key,node.value)) return;
-            node=node.next;
+        if (visitor == null) return;
+        LinkedNode<K, V> node = first;
+        while (node != null) {
+            if (visitor.visit(node.key, node.value)) return;
+            node = node.next;
         }
     }
+
     @Override
     protected void afterRemove(Node<K, V> willNode, Node<K, V> removedNode) {
         LinkedNode<K, V> node1 = (LinkedNode<K, V>) willNode;
@@ -87,6 +88,7 @@ public class LinkedHashMap<K,V> extends HashMap<K,V> {
             next.prev = prev;
         }
     }
+
     @Override
     protected Node<K, V> createNode(K key, V value, Node<K, V> parent) {
         LinkedNode node = new LinkedNode(key, value, parent);
@@ -100,9 +102,9 @@ public class LinkedHashMap<K,V> extends HashMap<K,V> {
         return node;
     }
 
-    private static class LinkedNode<K,V> extends Node<K,V>{
-        LinkedNode<K,V> prev;
-        LinkedNode<K,V> next;
+    private static class LinkedNode<K, V> extends Node<K, V> {
+        LinkedNode<K, V> prev;
+        LinkedNode<K, V> next;
 
         public LinkedNode(K key, V value, Node<K, V> parent) {
             super(key, value, parent);
