@@ -186,12 +186,12 @@ public class HashMap<K, V> implements Map<K, V> {
         return new Node<>(key, value, parent);
     }
 
-//    protected void afterRemove(Node<K, V> willNode, Node<K, V> removedNode) {
-//    }
+    protected void afterRemove(Node<K, V> willNode, Node<K, V> removedNode) {
+    }
 
     protected V remove(Node<K, V> node) {
         if (node == null) return null;
-//        Node<K, V> willNode = node;
+        Node<K, V> willNode = node;
         size--;
         V oldValue = node.value;
 
@@ -237,7 +237,7 @@ public class HashMap<K, V> implements Map<K, V> {
             afterRemove(node);
         }
         // 交给子类去处理
-//        afterRemove(willNode, node);
+        afterRemove(willNode, node);
         return oldValue;
     }
 
