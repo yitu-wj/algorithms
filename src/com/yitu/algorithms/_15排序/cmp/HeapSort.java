@@ -4,10 +4,16 @@ import com.yitu.algorithms._15排序.Sort;
 
 /**
  * 堆排序（选择排序的优化）
- * @param <T>
+ * 执行流程
+ * ① 对序列进行原地建堆（heapify）
+ * ② 重复执行以下操作，直到堆的元素数量为 1
+ * 交换堆顶元素与尾元素
+ * 堆的元素数量减 1
+ * 对 0 位置进行 1 次 siftDown 操作
  */
 public class HeapSort<T extends Comparable<T>> extends Sort<T> {
     private int heapSize;
+
     @Override
     protected void sort() {
         // 原地建堆
@@ -24,6 +30,10 @@ public class HeapSort<T extends Comparable<T>> extends Sort<T> {
             siftDown(0);
         }
     }
+
+    /**
+     * 自下而上的下滤
+     */
     private void siftDown(int index) {
         T element = array[index];
 

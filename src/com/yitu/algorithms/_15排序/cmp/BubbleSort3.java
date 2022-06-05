@@ -3,7 +3,8 @@ package com.yitu.algorithms._15排序.cmp;
 import com.yitu.algorithms._15排序.Sort;
 
 /**
- * 冒泡排序（优化）
+ * 冒泡排序（优化 2 ）
+ * 如果序列尾部已经局部有序，可以记录最后1次交换的位置，减少比较次数
  */
 public class BubbleSort3<T extends Comparable<T>> extends Sort<T> {
     @Override
@@ -11,7 +12,6 @@ public class BubbleSort3<T extends Comparable<T>> extends Sort<T> {
         for (int end = array.length - 1; end > 0; end--) {
             int sortedIndex = 1;
             for (int begin = 1; begin <= end; begin++) {
-                // if (array[begin] < array[begin - 1]) {
                 if (cmp(begin, begin - 1) < 0) {
                     swap(begin, begin - 1);
                     sortedIndex = begin;

@@ -12,10 +12,9 @@ public class InsertionSort3<T extends Comparable<T>> extends Sort<T> {
             insert(begin, search(begin));
         }
     }
+
     /**
      * 将source位置的元素插入到dest位置
-     * @param source
-     * @param dest
      */
     private void insert(int source, int dest) {
         T v = array[source];
@@ -28,8 +27,6 @@ public class InsertionSort3<T extends Comparable<T>> extends Sort<T> {
     /**
      * 利用二分搜索找到 index 位置元素的待插入位置
      * 已经排好序数组的区间范围是 [0, index)
-     * @param index
-     * @return
      */
     private int search(int index) {
         int begin = 0;

@@ -3,7 +3,8 @@ package com.yitu.algorithms._15排序.cmp;
 import com.yitu.algorithms._15排序.Sort;
 
 /**
- * 冒泡排序（优化）
+ * 冒泡排序（优化 1 ）
+ * 如果序列已经完全有序，可以提前终止冒泡排序
  */
 public class BubbleSort2<T extends Comparable<T>> extends Sort<T> {
     @Override
@@ -11,7 +12,6 @@ public class BubbleSort2<T extends Comparable<T>> extends Sort<T> {
         for (int end = array.length - 1; end > 0; end--) {
             boolean sorted = true;
             for (int begin = 1; begin <= end; begin++) {
-                // if (array[begin] < array[begin - 1]) {
                 if (cmp(begin, begin - 1) < 0) {
                     swap(begin, begin - 1);
                     sorted = false;
