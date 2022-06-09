@@ -5,6 +5,7 @@ import com.yitu.algorithms.tools.Times;
 
 public class Main {
     static final int count = 1000000;
+
     public static void main(String[] args) {
         testTime(new UnionFind_QU_R_PC(count));
         testTime(new UnionFind_QU_R_PS(count));
@@ -37,13 +38,13 @@ public class Main {
 
         Times.test(uf.getClass().getSimpleName(), () -> {
             for (int i = 0; i < count; i++) {
-                uf.union((int)(Math.random() * count),
-                        (int)(Math.random() * count));
+                uf.union((int) (Math.random() * count),
+                        (int) (Math.random() * count));
             }
 
             for (int i = 0; i < count; i++) {
-                uf.isSame((int)(Math.random() * count),
-                        (int)(Math.random() * count));
+                uf.isSame((int) (Math.random() * count),
+                        (int) (Math.random() * count));
             }
         });
     }
@@ -69,13 +70,13 @@ public class Main {
 
         Times.test(uf.getClass().getSimpleName(), () -> {
             for (int i = 0; i < count; i++) {
-                uf.union((int)(Math.random() * count),
-                        (int)(Math.random() * count));
+                uf.union((int) (Math.random() * count),
+                        (int) (Math.random() * count));
             }
 
             for (int i = 0; i < count; i++) {
-                uf.isSame((int)(Math.random() * count),
-                        (int)(Math.random() * count));
+                uf.isSame((int) (Math.random() * count),
+                        (int) (Math.random() * count));
             }
         });
     }

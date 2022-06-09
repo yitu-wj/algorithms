@@ -2,6 +2,7 @@ package com.yitu.algorithms._16并查集;
 
 /**
  * Quick Union - 基于rank的优化 - 路径减半(Path Halving)
+ * 使路径上每隔一个节点就指向其祖父节点（parent的parent）
  */
 public class UnionFind_QU_R_PH extends UnionFind_QU_R{
     public UnionFind_QU_R_PH(int capacity) {
