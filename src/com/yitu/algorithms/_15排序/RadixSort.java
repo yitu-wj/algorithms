@@ -2,6 +2,9 @@ package com.yitu.algorithms._15排序;
 
 /**
  * 基数排序
+ * 基数排序非常适合用于整数排序（尤其是非负整数）
+ * 执行流程：依次对个位数、十位数、百位数、千位数、万位数...进行排序（从低位到高位）
+ * 个位数、十位数、百位数的取值范围都是固定的0~9，可以使用计数排序对它们进行排序
  */
 public class RadixSort extends Sort<Integer> {
     @Override

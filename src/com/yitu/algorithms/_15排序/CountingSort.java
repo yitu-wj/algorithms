@@ -2,6 +2,8 @@ package com.yitu.algorithms._15排序;
 
 /**
  * 计数排序
+ * 计数排序的核心思想
+ * 统计每个整数在序列中出现的次数，进而推导出每个整数在有序序列中的索引
  */
 public class CountingSort extends Sort<Integer>{
     @Override
@@ -30,6 +32,7 @@ public class CountingSort extends Sort<Integer>{
         }
 
         // 从后往前遍历元素，将它放到有序数组中的合适位置
+        // 从后往前遍历元素可以使排序具有稳定性
         int[] newArray = new int[array.length];
         for (int i = array.length - 1; i >= 0; i--) {
             newArray[--counts[array[i] - min]] = array[i];
